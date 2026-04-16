@@ -197,6 +197,8 @@ jobs:
           path: |
             *.msi
             src-tauri/target/x86_64-pc-windows-msvc/release/*.exe
+            src-tauri/target/x86_64-pc-windows-msvc/release/bundle/msi/*.exe
+            src-tauri/target/x86_64-pc-windows-msvc/release/*.exe
           retention-days: 3
 
       - name: Rust cache store
