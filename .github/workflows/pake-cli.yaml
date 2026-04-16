@@ -194,7 +194,9 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: ${{ inputs.name }}-Windows
-          path: ${{ inputs.name }}.msi
+          path: |
+            *.msi
+            src-tauri/target/x86_64-pc-windows-msvc/release/*.exe
           retention-days: 3
 
       - name: Rust cache store
